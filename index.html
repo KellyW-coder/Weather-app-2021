@@ -14,7 +14,207 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+       <div class="weather-block">
+        <h1 class="col-auto border p-2 mt-3 rounded shadow-sm">
+          Weather Search
+        </h1>
+        <div class="card-body">
+          <form id="city-search">
+            <div class="input-group mb-3 mt-3">
+              <input
+                class="form-control shadow-sm"
+                type="text"
+                placeholder="Search city here"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+              />
+              <button class="btn btn-outline-info" type="submit" value="Search">
+                Go >
+              </button>
+              <button type="button" class="btn btn-dark" id="current-loc">
+                Current location
+              </button>
+            </div>
+
+            <hr />
+
+            <div class="row col-auto p-2">
+              <div class="col-6">
+                <h2 id="city">Search city</h2>
+                <ul>
+                  <li id="today-date"></li>
+                  <li>Precipitation: 76 %</li>
+                  <li>Wind: 4 km/h</li>
+                </ul>
+              </div>
+              <div class="col-3">
+                <span class="temp" id="temperature"> 00 </span>
+                <p>
+                  <a href="#" id="celcius-link">°C</a> |
+                  <a href="#" id="farenheit-link">°F</a>
+                </p>
+              </div>
+              <div class="col-3">
+                <figure class="figure">
+                  <img
+                    src="images/sun.png"
+                    class="figure-img img-fluid rounded"
+                    alt="Weather icon"
+                    width="80px"
+                  />
+                  <figcaption class="figure-caption">Sunny</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <section>
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Mon
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/sun.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Sunny</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      20 °C
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Tues
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/Sun-cloudy.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Cloudy</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      19 °C
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Wed
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/cloud.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Cloudy</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      16 °C
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Thurs
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/wind.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Windy</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      14 °C
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Fri
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/rain.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Rain</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      13 °C
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      Sat
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/rain.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Rain</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      16 °C
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p class="footer">
+      <a
+        href="https://github.com/KellyW-coder/Weather-app-KCW-2021"
+        target="_parent"
+      >
+        Open-source code
+      </a>
+      by
+      <a href="https://www.kccd.co.za/" target="_parent">Kelly Williams</a>
+      | 2021
+    </p>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
