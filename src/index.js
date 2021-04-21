@@ -69,8 +69,12 @@ function showCurrentTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempDipslay = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   tempDipslay.innerHTML = `${temperature}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let currentCity = document.querySelector("h2");
   currentCity.innerHTML = `${city}`;
