@@ -65,6 +65,7 @@ figcaption,
 section {
   margin-right: 0px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .btn-dark:hover {
