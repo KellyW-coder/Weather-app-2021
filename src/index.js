@@ -35,6 +35,7 @@ function search(event) {
   h2.innerHTML = `${searchInput.value}`;
   let apiKey = "3ae6bdb32a731d95f7ea1efdd218128c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
+
   axios.get(apiUrl).then(showCurrentTemperature);
 }
 let form = document.querySelector("#city-search");
