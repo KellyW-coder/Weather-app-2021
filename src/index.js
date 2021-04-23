@@ -69,7 +69,7 @@ function showCurrentTemperature(response) {
   currentCity.innerHTML = `${city}`;
 }
 
-//degrees
+//degrees and unit conversion
 function displayFarenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
