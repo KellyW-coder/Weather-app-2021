@@ -36,10 +36,6 @@ h2 {
   max-width: 800px;
 }
 
-.toggle {
-  margin-left: 10px;
-}
-
 ul {
   margin: 0 0 10px;
   padding: 0;
@@ -82,4 +78,8 @@ a {
   margin: 0 auto;
   text-align: center;
   font-size: 12px;
+}
+
+.units .active {
+  color: #000000;
 }
