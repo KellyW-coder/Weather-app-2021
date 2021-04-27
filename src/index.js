@@ -76,7 +76,9 @@ function displayForecast(response) {
                           alt="Weather icon"
                           width="80px"
                         />
-                        <figcaption class="figure-caption">Sunny</figcaption>
+                        <figcaption class="figure-caption">${
+                          forecastDay.weather[0].description
+                        }</figcaption>
                       </figure>
                     </div>
                     <div class="card-footer bg-transparent border-info">
