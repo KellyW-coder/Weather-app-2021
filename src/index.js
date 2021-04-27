@@ -43,7 +43,8 @@ let form = document.querySelector("#city-search");
 form.addEventListener("submit", search);
 
 //forecast display
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
@@ -81,6 +82,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "3ae6bdb32a731d95f7ea1efdd218128c";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //temperature
 //location and weather
 function showCurrentTemperature(response) {
@@ -106,6 +116,8 @@ function showCurrentTemperature(response) {
 
   let currentCity = document.querySelector("h2");
   currentCity.innerHTML = `${city}`;
+
+  getForecast(response.data.coord);
 }
 
 //degrees and unit conversion
@@ -134,8 +146,6 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 let celciusTemperature = null;
-
-displayForecast();
 
 //current location button
 function retrievePosition(position) {
