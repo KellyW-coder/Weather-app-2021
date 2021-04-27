@@ -53,9 +53,26 @@ li {
   position: relative;
   top: -5px;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-header {
+  opacity: 0.6;
+}
+
+.card-body {
+  margin-top: 1px;
+  margin-bottom: -15px;
+}
 
 .figure {
   align-items: center;
+}
+
+.card-footer {
+  font-size: 14px;
 }
 
 figcaption:first-letter,
@@ -63,6 +80,10 @@ section:first-letter {
   margin-right: 0px;
   text-align: center;
   text-transform: capitalize;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
 .btn-dark:hover {
