@@ -42,6 +42,45 @@ let form = document.querySelector("#city-search");
 
 form.addEventListener("submit", search);
 
+//forecast display
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `    
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-header bg-transparent border-info">
+                      ${day}
+                    </div>
+                    <div class="card-body">
+                      <figure class="figure">
+                        <img
+                          src="images/sun.png"
+                          class="figure-img img-fluid rounded"
+                          alt="Weather icon"
+                          width="80px"
+                        />
+                        <figcaption class="figure-caption">Sunny</figcaption>
+                      </figure>
+                    </div>
+                    <div class="card-footer bg-transparent border-info">
+                      <span class="weather-forecast-temperature-max">20°</span> 
+                      <span class="weather-forecast-temperature-min">12°</span> 
+                    </div>
+                  </div>
+                </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //temperature
 //location and weather
 function showCurrentTemperature(response) {
@@ -95,6 +134,8 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 let celciusTemperature = null;
+
+displayForecast();
 
 //current location button
 function retrievePosition(position) {
